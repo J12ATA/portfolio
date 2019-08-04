@@ -5,7 +5,10 @@
 		<script>
 			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 			ga('create', 'UA-145082978-1', 'auto');
-			ga('send', 'pageview');
+			ga('require', 'outboundLinkTracker', { events: ['click', 'auxclick', 'contextmenu'] });
+			ga('require', 'outboundFormTracker');
+			ga('require', 'eventTracker');
+			ga('require', 'pageVisibilityTracker', { sendInitialPageview: true });
 		</script>
 		<script async src="https://www.google-analytics.com/analytics.js"></script>
 		<script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
@@ -23,10 +26,10 @@
 
 				<!-- Nav -->
 					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Portfolio</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://github.com/j12ata" target="_blank" class="icon brands fa-github"><span>Github</span></a>
+						<a href="#" class="icon solid fa-home" ga-on="click,auxclick,contextmenu" ga-event-category="Home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-folder" ga-on="click,auxclick,contextmenu" ga-event-category="Work"><span>Portfolio</span></a>
+						<a href="#contact" class="icon solid fa-envelope" ga-on="click,auxclick,contextmenu" ga-event-category="Contact"><span>Contact</span></a>
+						<a href="https://github.com/j12ata" target="_blank" class="icon brands fa-github" ga-on="click,auxclick,contextmenu" ga-event-category="Github"><span>Github</span></a>
 					</nav>
 
 				<!-- Main -->
